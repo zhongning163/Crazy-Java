@@ -1,0 +1,22 @@
+使用final修饰局部变量时，既可以在定义时指定默认值，也可以不指定默认值
+
+public class FinalLocalVariableTest
+{
+  //不能对final修饰的形参赋值，下列语句非法
+  //a=5；
+}
+public static void main(String[] args)
+{
+  //定义final局部变量时指定默认值，则str变量无法重新赋值
+  final String str="hello";
+  //下列赋值语句非法
+  //str="Java";
+  //定义final局部变量时没有指定默认值，则d变量可被赋值一次
+  final double d;
+  //第一次赋初始值，成功
+  d=5.6;
+  //对final变量重复赋值，下面语句非法
+  //d=3.4；
+}
+
+用final修饰的形参不能被赋值。因为形参在调用该方法时，由系统根据传入的参数来完成初始化。
